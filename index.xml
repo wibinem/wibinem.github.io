@@ -17,7 +17,9 @@
       <pubDate>Sat, 12 Sep 2020 16:26:02 +0700</pubDate>
       
       <guid>https://wibinem.github.io/blog/hello/</guid>
-      <description>Hello Friend!!!</description>
+      <description>Hello mas bro!!!!
+Ini adalah post pertama blog ini menggunakan Hugo, semoga kedepan ga males untuk update blognya.
+Thanks to Hugo dan Github Pages</description>
     </item>
     
     <item>
@@ -26,7 +28,10 @@
       <pubDate>Sat, 12 Sep 2020 16:25:41 +0700</pubDate>
       
       <guid>https://wibinem.github.io/about/</guid>
-      <description>Halaman About Me</description>
+      <description>Selamat datang, blog ini hanya berisi coretan-coretan kecil mengenai Linux dan Open Source.
+Blog ini ditujukan untuk mereka yang mau/sedang belajar, baik sebagai SysAdmin maupun DevOps atau bahkan Programmer. 😆
+Mohon koreksi jika ada artikel yang kurang sesuai.
+🇮🇩 Sharing is caring</description>
     </item>
     
   </channel>
