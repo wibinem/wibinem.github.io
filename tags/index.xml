@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Linux &amp; Open Source</title>
-    <link>https://wibinem.github.io/tags/</link>
+    <link>https://blog.wibiharto.web.id/tags/</link>
     <description>Recent content in Tags on My Linux &amp; Open Source</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Sep 2020 16:26:02 +0700</lastBuildDate>
     
-	<atom:link href="https://wibinem.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wibiharto.web.id/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hugo</title>
-      <link>https://wibinem.github.io/tags/hugo/</link>
+      <link>https://blog.wibiharto.web.id/tags/hugo/</link>
       <pubDate>Sat, 12 Sep 2020 16:26:02 +0700</pubDate>
       
-      <guid>https://wibinem.github.io/tags/hugo/</guid>
+      <guid>https://blog.wibiharto.web.id/tags/hugo/</guid>
       <description></description>
     </item>
     
