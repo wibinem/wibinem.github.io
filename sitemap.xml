@@ -4,11 +4,56 @@
   
   <url>
     <loc>https://blog.wibiharto.web.id/blog/</loc>
-    <lastmod>2020-09-12T16:26:02+07:00</lastmod>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.wibiharto.web.id/blog/hello/</loc>
+    <loc>https://blog.wibiharto.web.id/categories/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/categories/linux/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/tags/linux/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/2020/09/membuat-swapfile-di-ubuntu/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/tags/ram/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/tags/swap/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/tags/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/tags/ubuntu/</loc>
+    <lastmod>2020-09-13T06:45:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wibiharto.web.id/2020/09/hello/</loc>
     <lastmod>2020-09-12T16:26:02+07:00</lastmod>
   </url>
   
@@ -18,22 +63,8 @@
   </url>
   
   <url>
-    <loc>https://blog.wibiharto.web.id/</loc>
-    <lastmod>2020-09-12T16:26:02+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wibiharto.web.id/tags/</loc>
-    <lastmod>2020-09-12T16:26:02+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.wibiharto.web.id/about/</loc>
     <lastmod>2020-09-12T16:25:41+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wibiharto.web.id/categories/</loc>
   </url>
   
 </urlset>

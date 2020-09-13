@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on My Linux &amp; Open Source</title>
-    <link>https://blog.wibiharto.web.id/blog/</link>
-    <description>Recent content in Blogs on My Linux &amp; Open Source</description>
+    <title>ram on My Linux &amp; Open Source</title>
+    <link>https://blog.wibiharto.web.id/tags/ram/</link>
+    <description>Recent content in ram on My Linux &amp; Open Source</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Sep 2020 06:45:35 +0700</lastBuildDate>
     
-	<atom:link href="https://blog.wibiharto.web.id/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wibiharto.web.id/tags/ram/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,17 +21,6 @@
 Cek Swap Sebelum mulai, cek terlebih dahulu partisi swapnya.
 $ sudo swapon --show Jika hasilnya kosong, tandanya OS tersebut tidak memiliki partisi swap. Sebaliknya jika hasilnya seperti dibawah ini, maka partisi swap sudah ada.
 NAME TYPE SIZE USED PRIO /dev/sda2 partition 1.9G 0B -2 Tidak memungkinkan ada 2 atau lebih partisi swap dalam satu sistem.</description>
-    </item>
-    
-    <item>
-      <title>Hello</title>
-      <link>https://blog.wibiharto.web.id/2020/09/hello/</link>
-      <pubDate>Sat, 12 Sep 2020 16:26:02 +0700</pubDate>
-      
-      <guid>https://blog.wibiharto.web.id/2020/09/hello/</guid>
-      <description>Hello mas bro!!!!
-Ini adalah post pertama blog ini menggunakan Hugo, semoga kedepan ga males untuk update blognya.
-Thanks to Hugo dan Github Pages</description>
     </item>
     
   </channel>
