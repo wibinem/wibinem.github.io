@@ -6,17 +6,17 @@
     <description>Recent content on My Linux &amp; Open Source</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Sep 2020 06:45:35 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 16:25:41 +0700</lastBuildDate>
     
 	<atom:link href="https://blog.wibiharto.web.id/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Membuat Swapfile Di Ubuntu</title>
-      <link>https://blog.wibiharto.web.id/2020/09/membuat-swapfile-di-ubuntu/</link>
+      <link>https://blog.wibiharto.web.id/blog/2020/membuat-swapfile-di-ubuntu/</link>
       <pubDate>Sun, 13 Sep 2020 06:45:35 +0700</pubDate>
       
-      <guid>https://blog.wibiharto.web.id/2020/09/membuat-swapfile-di-ubuntu/</guid>
+      <guid>https://blog.wibiharto.web.id/blog/2020/membuat-swapfile-di-ubuntu/</guid>
       <description>Distro linux sekarang sebagian besar sudah tidak menerapkan partisi swap terpisah, hal ini dikarenakan kapasitas RAM komputer/laptop sekarang sudah cukup besar dan juga harga RAM yang sudah terjangkau.
 Cek Swap Sebelum mulai, cek terlebih dahulu partisi swapnya.
 $ sudo swapon --show Jika hasilnya kosong, tandanya OS tersebut tidak memiliki partisi swap. Sebaliknya jika hasilnya seperti dibawah ini, maka partisi swap sudah ada.
@@ -25,10 +25,10 @@ NAME TYPE SIZE USED PRIO /dev/sda2 partition 1.9G 0B -2 Tidak memungkinkan ada 2
     
     <item>
       <title>Hello</title>
-      <link>https://blog.wibiharto.web.id/2020/09/hello/</link>
+      <link>https://blog.wibiharto.web.id/blog/2020/hello/</link>
       <pubDate>Sat, 12 Sep 2020 16:26:02 +0700</pubDate>
       
-      <guid>https://blog.wibiharto.web.id/2020/09/hello/</guid>
+      <guid>https://blog.wibiharto.web.id/blog/2020/hello/</guid>
       <description>Hello mas bro!!!!
 Ini adalah post pertama blog ini menggunakan Hugo, semoga kedepan ga males untuk update blognya.
 Thanks to Hugo dan Github Pages</description>
