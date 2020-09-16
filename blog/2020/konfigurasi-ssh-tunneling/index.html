@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Wibiharto ">
+<meta name="description" content="SSH tunneling atau bisa disebut ssh port forwarding adalah suatu metode koneksi SSH terenkripsi antara client server melalui port tertentu.
+SSH tunneling biasa digunakan untuk transfer data yang tidak terenkripsi, seperti VNC dan FTP. Secara singkat metode ini sama dengan akses VPN, jadi IP address yang terlacak adalah IP address server remote.
+Ada tiga tipe untuk melakukan SSH Port Forwarding:
+  Local Port Forwarding
+Meneruskan koneksi dari klien/lokal ke server/remote melalui SSH dan dan port tujuan." />
+<meta name="keywords" content=", ubuntu, linux, ssh, tunneling" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://blog.wibiharto.web.id/blog/2020/konfigurasi-ssh-tunneling/" />
+
+
+    <title>
+        
+            Konfigurasi SSH Tunneling :: My Linux &amp; Open Source 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.d1ea4af8fd04fb24a4f8b882ea54bd04eb245427ca4baf527c81a5dab071410b.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Konfigurasi SSH Tunneling">
+<meta itemprop="description" content="SSH tunneling atau bisa disebut ssh port forwarding adalah suatu metode koneksi SSH terenkripsi antara client server melalui port tertentu.
+SSH tunneling biasa digunakan untuk transfer data yang tidak terenkripsi, seperti VNC dan FTP. Secara singkat metode ini sama dengan akses VPN, jadi IP address yang terlacak adalah IP address server remote.
+Ada tiga tipe untuk melakukan SSH Port Forwarding:
+  Local Port Forwarding
+Meneruskan koneksi dari klien/lokal ke server/remote melalui SSH dan dan port tujuan.">
+<meta itemprop="datePublished" content="2020-09-16T10:53:24&#43;07:00" />
+<meta itemprop="dateModified" content="2020-09-16T10:53:24&#43;07:00" />
+<meta itemprop="wordCount" content="647">
+
+
+
+<meta itemprop="keywords" content="ubuntu,linux,ssh,tunneling," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Konfigurasi SSH Tunneling"/>
+<meta name="twitter:description" content="SSH tunneling atau bisa disebut ssh port forwarding adalah suatu metode koneksi SSH terenkripsi antara client server melalui port tertentu.
+SSH tunneling biasa digunakan untuk transfer data yang tidak terenkripsi, seperti VNC dan FTP. Secara singkat metode ini sama dengan akses VPN, jadi IP address yang terlacak adalah IP address server remote.
+Ada tiga tipe untuk melakukan SSH Port Forwarding:
+  Local Port Forwarding
+Meneruskan koneksi dari klien/lokal ke server/remote melalui SSH dan dan port tujuan."/>
+
+
+
+
+
+    <meta property="article:section" content="Linux" />
+
+
+
+    <meta property="article:published_time" content="2020-09-16 10:53:24 &#43;0700 WIB" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">ping wibiharto.web.id</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#00aa00;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://blog.wibiharto.web.id/about/">About</a></li><li><a href="https://blog.wibiharto.web.id/blog/">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://blog.wibiharto.web.id/blog/2020/konfigurasi-ssh-tunneling/">Konfigurasi SSH Tunneling</a></h2>
+
+            
+
+            
+
+            <div class="post-content">
+                <p><strong>SSH tunneling</strong> atau bisa disebut ssh <em>port forwarding</em> adalah suatu metode koneksi SSH terenkripsi antara <em>client server</em> melalui port tertentu.</p>
+<p><strong>SSH tunneling</strong> biasa digunakan untuk transfer data yang tidak terenkripsi, seperti <strong>VNC</strong> dan <strong>FTP</strong>. Secara singkat metode ini sama dengan akses <strong>VPN</strong>, jadi IP address yang terlacak adalah IP address server remote.</p>
+<p>Ada tiga tipe untuk melakukan SSH Port Forwarding:</p>
+<ul>
+<li>
+<p><strong>Local Port Forwarding</strong><br>
+Meneruskan koneksi dari klien/lokal ke server/remote melalui SSH dan dan port tujuan.</p>
+</li>
+<li>
+<p><strong>Remote Port Forwarding</strong><br>
+Meneruskan koneksi dari server/remote ke klien/lokal melalui SSH dan dan port tujuan.</p>
+</li>
+<li>
+<p><strong>Dynamic Port Forwarding</strong><br>
+Membuat server proxy SOCKS yang memungkinkan koneksi di berbagai port.</p>
+</li>
+</ul>
+<h2 id="local-port-forwarding">Local Port Forwarding</h2>
+<p><em>Local Port Forwarding</em> sering digunakan untuk remote di jaringan lokal seperti database atau Server VNC.</p>
+<p>Di Linux, MacOS atau sistem Unix lainnya, <em>local port forwarding</em> menggunakan opsi <strong>-L</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -L <span style="color:#f92672">[</span>IP_LOKAL:<span style="color:#f92672">]</span>PORT_LOKAL:TUJUAN:PORT_TUJUAN <span style="color:#f92672">[</span>USER@<span style="color:#f92672">]</span>IP_SERVER
+</code></pre></div><p>keterangan:</p>
+<ul>
+<li><strong>[IP_LOKAL:]PORT_LOKAL</strong> - IP Lokal dan port. Ketika <strong>IP_LOKAL</strong> kosong, otomatis ip ssh klien menjadi <strong>localhost</strong> (127.0.0.1)</li>
+<li><strong>TUJUAN:PORT_TUJUAN</strong> - IP atau hostname dan port dari server tujuan / remote</li>
+<li><strong>[USER@]IP_SERVER</strong> - SSH remote user dan alamat IP Server</li>
+</ul>
+<p>Gunakan port diatas <strong>1024</strong> pada <strong>PORT_LOKAL</strong>. Secara default SSH menggunakan port <strong>22</strong>, jika server SSH menggunakan port selain <strong>22</strong> maka tambahkan dibelakang sendiri <strong>-p [ANGKA_PORT]</strong></p>
+<p>Hostname tujuan harus bisa diakses oleh Server SSH.</p>
+<p>Misal, kita mau akses MySQL langsung ke localhost, tapi kita tidak bisa akses database secara langsung, harus masuk kedalam server tertentu. Database MySQL ada di <strong>db001.host</strong> dengan port <strong>3306</strong> dan hanya bisa diakses oleh server <strong>pub001.host</strong>, maka ssh port forwardingnya:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -L 3336:db001.host:3306 user@pub001.host
+</code></pre></div><p>Dengan perintah diatas ketika akses database dari klien dengan alamat <strong>127.0.0.1:3336</strong> maka koneksi akan diteruskan ke <strong>db001.host:3306</strong> melalui server <strong>pub001.host</strong>.</p>
+<p>Dengan sedikit modifikasi perintah, kita bisa lakukan remote ke banyak database MySQL sekaligus. Misal ada server database <strong>db002.host</strong> dan hanya dapat diakses melalui <strong>pub001.host</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -L 3336:db001.host:3306 3337:db002.host:3306 user@pub001.host
+</code></pre></div><p>Kita bisa akses database kedua dengan alamat <strong>127.0.0.1:3337</strong>, yang membedakan hanya port-nya saja.</p>
+<h2 id="remote-port-forwarding">Remote Port Forwarding</h2>
+<p>Remote Port Forwarding adalah kebalikan dari Local Port Forwarding, koneksi dari remote server menuju ke lokal kita. Biasa digunakan untuk memberi akses internal kepada seseorang dari luar.</p>
+<p>Di Linux, MacOS atau sistem Unix lainnya, <em>remote port forwarding</em> menggunakan opsi <strong>-R</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -R <span style="color:#f92672">[</span>REMOTE:<span style="color:#f92672">]</span>PORT_REMOTE:TUJUAN:PORT_TUJUAN <span style="color:#f92672">[</span>USER@<span style="color:#f92672">]</span>IP_SERVER
+</code></pre></div><p>keterangan:</p>
+<ul>
+<li><strong>[REMOTE:]PORT_REMOTE</strong> - Alamat IP dan port untuk server remote. Jika <strong>REMOTE</strong> kosong, maka akses remote diberikan ke semua alamat IP.</li>
+<li><strong>TUJUAN:PORT_TUJUAN</strong> - Alamat IP atau hostname dan port server tujuan.</li>
+<li><strong>[USER@]IP_SERVER</strong> - SSH remote user dan alamat IP Server.</li>
+</ul>
+<p>Misal, kita mau menunjukkan aplikasi web yang ada di lokal kepada teman kita dikantor. Tapi kita tidak punya IP Publik, maka dengan <em>SSH Remote Port Forwarding</em> teman kita bisa akses web aplikasi yang sedang jalan di lokal.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -R 8080:127.0.0.1:3000 -N -f user@remote.host
+</code></pre></div><p>Perintah diatas akan membuka port <strong>3000</strong> dari lokal kita, kemudian semua trafik diteruskan ke port <strong>8080</strong> dari luar. Kini teman kantor bisa akses aplikasi web lokal kita lewat browser <strong>ip_server_ssh:8080</strong></p>
+<p>Jika masih ada kendala, masuk ke server kemudian edit file <strong>/etc/ssh/sshd_config</strong>, dan ubah nilai <strong>GatewayPorts</strong> menjadi <strong>yes</strong>.</p>
+<h2 id="dynamic-port-forwarding">Dynamic Port Forwarding</h2>
+<p>Dynamic Port FOrwarding akan membuat sebuah socket di lokal (klien ssh) yang bertindak sebagai server proxy SOCKS. Ketika klien sudah terhubung maka akan diteruskan ke server dan semua trafik ke masing-masing port.</p>
+<p>Di Linux, MacOS atau sistem Unix lainnya, <em>local port forwarding</em> menggunakan opsi <strong>-D</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -D <span style="color:#f92672">[</span>IP_LOKAL:<span style="color:#f92672">]</span>PORT_LOKAL <span style="color:#f92672">[</span>USER@<span style="color:#f92672">]</span>IP_SERVER
+</code></pre></div><p>keterangan:</p>
+<ul>
+<li><strong>[IP_LOKAL:]PORT_LOKAL</strong> - Alamat IP dan port lokal. Jika <strong>IP_LOKAL</strong> kosong, maka ip yang diberikan adalah localhost (127.0.0.1).</li>
+<li><strong>[USER@]IP_SERVER</strong> - SSH remote user dan alamat IP Server.</li>
+</ul>
+<p>Misal kita akan buat SSH Tunnel SOCKS ke port 9090:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -D <span style="color:#ae81ff">9090</span> -N -f user@remote.host
+</code></pre></div><p>Setelah terhubung, lakukan konfigurasi proxy SOCKS di browser Firefox, Google Chrome atau aplikasi lain yang mendukung.</p>
+<p>Untuk konfigurasi di Windows silahkan gunakan tools PuTTY.</p>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<p>SSH tunneling memudahkan kita dalam melakukan remote dengan aman, serta bisa sebagai VPN tanpa harus install VPN server terlebih dahulu.</p>
+<p>Jika ada masalah, silahkan komentar dibawah.
+Terima kasih.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://blog.wibiharto.web.id/tags/ubuntu/">ubuntu</a></span>
+        <span class="tag"><a href="https://blog.wibiharto.web.id/tags/linux/">linux</a></span>
+        <span class="tag"><a href="https://blog.wibiharto.web.id/tags/ssh/">ssh</a></span>
+        <span class="tag"><a href="https://blog.wibiharto.web.id/tags/tunneling/">tunneling</a></span>
+        
+    </p>
+
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://blog.wibiharto.web.id/categories/linux/">Linux</a></span>
+        
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://blog.wibiharto.web.id">Wibiharto</a></span>
+            
+            
+            <span> <a href="https://blog.wibiharto.web.id/blog/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

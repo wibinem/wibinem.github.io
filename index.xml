@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Konfigurasi SSH Tunneling</title>
+      <link>https://blog.wibiharto.web.id/blog/2020/konfigurasi-ssh-tunneling/</link>
+      <pubDate>Wed, 16 Sep 2020 10:53:24 +0700</pubDate>
+      
+      <guid>https://blog.wibiharto.web.id/blog/2020/konfigurasi-ssh-tunneling/</guid>
+      <description>SSH tunneling atau bisa disebut ssh port forwarding adalah suatu metode koneksi SSH terenkripsi antara client server melalui port tertentu.
+SSH tunneling biasa digunakan untuk transfer data yang tidak terenkripsi, seperti VNC dan FTP. Secara singkat metode ini sama dengan akses VPN, jadi IP address yang terlacak adalah IP address server remote.
+Ada tiga tipe untuk melakukan SSH Port Forwarding:
+  Local Port Forwarding
+Meneruskan koneksi dari klien/lokal ke server/remote melalui SSH dan dan port tujuan.</description>
+    </item>
+    
+    <item>
       <title>Membuat Swapfile Di Ubuntu</title>
       <link>https://blog.wibiharto.web.id/blog/2020/membuat-swapfile-di-ubuntu/</link>
       <pubDate>Sun, 13 Sep 2020 06:45:35 +0700</pubDate>
